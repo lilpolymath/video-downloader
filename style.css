@@ -40,23 +40,42 @@ h3 {
   font-weight: bold;
 }
 
-p {
+p,
+option {
   font-size: 2rem;
   color: #272343;
+}
+
+option {
+  width: 100%;
+  padding: 12px 0;
 }
 
 .link {
   padding: 16px;
 }
 
-input {
+input,
+select {
   width: 100%;
   height: auto;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   background-color: #f4f3f4;
   border: none;
   font-size: 1.875rem;
   margin: 1em 0;
+}
+
+select {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(./assets/arrow-down-s-line.svg);
+  background-repeat: no-repeat, repeat;
+  background-position: right 2rem top 50%, 0 0;
+  background-size: 2.5rem auto, 100%;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -116,9 +135,9 @@ button {
   padding: 16px;
   box-shadow: 0px -5px 23px #c1c1c1;
   max-width: 500px;
-  position: absolute;
+  /* position: absolute; */
   top: 98vh;
-  display: none;
+  /* display: none; */
 }
 
 .modal button {
@@ -138,6 +157,11 @@ button {
 
 .note span {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+label p {
+  text-align: center;
   font-weight: bold;
 }
 
