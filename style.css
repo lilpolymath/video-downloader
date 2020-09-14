@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  font: 62.5% 'Mulish', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.a {
+  fill: none;
+}
+
+.b {
+  fill: #272343;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+nav {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #272343;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2rem;
+  color: #272343;
+}
+
+.link {
+  padding: 16px;
+}
+
+input {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  background-color: #e8e8e8;
+  border: none;
+  font-size: 1.875rem;
+  margin: 1em 0;
+}
+
+::placeholder {
+  color: #56536b;
+}
+
+button {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  background-color: #272343;
+  color: white;
+  border: none;
+  font-size: 1.875rem;
+  margin: 1em 0;
+  font-weight: bolder;
+}
+
+.recent_downloads {
+  background-color: #e8e8e8;
+  height: auto;
+  margin: 2rem 0;
+  padding: 16px;
+}
+
+.recent_downloads header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent_downloads header p:first-child {
+  font-weight: bold;
+}
+
+.recent_downloads header p:nth-child(2) {
+  font-size: 1.5rem;
+}
+
+.recent_videos {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.box {
+  width: 100%;
+  height: 150px;
+  background-color: red;
+}
