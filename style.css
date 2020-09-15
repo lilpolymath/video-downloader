@@ -25,6 +25,11 @@ body {
   margin: 2rem auto;
 }
 
+main {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 nav {
   padding: 16px;
   display: flex;
@@ -82,18 +87,45 @@ select {
   color: #56536b;
 }
 
+.button {
+  width: auto;
+  height: 100%;
+  background-color: #272343;
+  margin: 2rem 0;
+}
+
 button {
-  position: relative;
   width: 100%;
+  position: relative;
   height: auto;
   padding: 16px;
-  background-color: #272343;
   color: white;
   border: none;
+  outline: none;
+  background: none;
   font-size: 1.875rem;
-  margin: 1em 0;
   font-weight: bolder;
   cursor: pointer;
+  z-index: 2;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 2s cubic-bezier(0, 0.5, 0, 1);
+  z-index: -1;
+}
+
+.animate_button button::after {
+  width: 100%;
+  background-color: #d4cfd4;
+  opacity: 0.7;
 }
 
 .recent_downloads {
@@ -119,10 +151,11 @@ button {
 
 .recent_videos {
   display: grid;
-  height: auto;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 1.5rem;
   margin: 2rem 0;
+  height: 450px;
+  overflow-y: scroll;
 }
 
 .box {
@@ -142,14 +175,10 @@ button {
   max-width: 500px;
   background-color: white;
   z-index: 3;
-  transition: all 0.3s cubic-bezier(.49,.11,.6,1);
+  transition: all 0.3s cubic-bezier(0.49, 0.11, 0.6, 1);
   max-height: 700px;
   position: fixed;
   bottom: 0;
-}
-
-.modal button {
-  margin: 0;
 }
 
 figure {
